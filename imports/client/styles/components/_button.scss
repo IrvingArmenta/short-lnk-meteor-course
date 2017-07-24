@@ -1,0 +1,39 @@
+.button {
+  background-color: $button-bg;
+  border: 0;
+  color: $button-color;
+  cursor: pointer;
+  line-height: 1.2;
+  margin-bottom: $space;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  font-size: $base-font-size;
+
+  &--link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &--secondary {
+    color: $button-secondary-color;
+    border: 1px solid $button-seondary-border-color;
+    background-color: $button-secondary-bg;
+    margin-bottom: 0;
+  }
+
+  &--pill {
+    background-color: transparent;
+    border: 1px solid $button-pill-color;
+    color: $button-pill-color;
+    padding: 0.3rem 0.8rem;
+    margin: 0 ($space / 2) 0 0;
+  }
+  &--link-text {
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+  }
+}
