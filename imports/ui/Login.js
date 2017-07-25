@@ -23,7 +23,7 @@ export default class Login extends Component {
 
     Meteor.loginWithPassword({email}, password,(err) => {
       if (err) {
-        this.setState({error: err.reason});
+        this.setState({error: 'Unable to login. Check email and password.'});
       } else {
         this.setState({error: ''});
       }
@@ -34,7 +34,7 @@ export default class Login extends Component {
     return (
       <div className="boxed-view">
         <div className="boxed-view__box">
-          <h1>Short Lnk Login</h1>
+          <h1>Short Lnk</h1>
           {this.state.error ? <p>{this.state.error}</p> : undefined}
           <form onSubmit={this.onSubmit} noValidate className="boxed-view__form">
             <input type="email" ref="email" name="email" placeholder="Email" />
